@@ -1,5 +1,17 @@
+<!--TODO: Look to abstract the layout in to a template and/or module -->
+<app-toolbar></app-toolbar>
 <mat-sidenav-container class="sidenav-container" role="main">
-  <app-toolbar></app-toolbar>
-  <app-nav></app-nav>
+  <mat-sidenav #drawer class="sidenav"
+               [attr.role]="'navigation'"
+               [mode]="(isHandset$ | async) ? 'over' : 'side'"
+               [fixedInViewport]="(isHandset$ | async)"
+               [opened]="(isHandset$ | async) === false">
+    <mat-sidenav-content>
+      <div class="content">
+        test
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav>
 </mat-sidenav-container>
 
