@@ -5,7 +5,7 @@ import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
 @Component({
   selector: 'app-moneycalculator',
   templateUrl: './moneycalculator.component.html',
-  styleUrls: ['./moneycalculator.component.css']
+  styleUrls: ['./moneycalculator.component.sass']
 })
 export class MoneycalculatorComponent {
   /** Based on the screen size, switch from standard to one column per row */
